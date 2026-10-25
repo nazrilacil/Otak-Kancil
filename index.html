@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Otak Kancil — Aplikasi Edukasi Android</title>
+    <meta name="description" content="Otak Kancil adalah aplikasi edukasi Android untuk menjelajahi materi, mengerjakan kuis, dan mengembangkan pengetahuan secara bertahap." />
+    <meta name="application-name" content="Otak Kancil" />
+    <meta name="author" content="Otak Kancil" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#121a31" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Favicon: letakkan favicon.png di folder public/ (disarankan persegi, minimal 512x512) -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Open Graph & Twitter. og:url, og:image, twitter:image, dan canonical disisipkan otomatis saat build
+         jika VITE_SITE_URL diisi (lihat vite.config.js dan .env.example). -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Otak Kancil" />
+    <meta property="og:title" content="Otak Kancil — Gabut Jadi Hebat" />
+    <meta property="og:description" content="Aplikasi edukasi Android: jelajahi materi, kerjakan kuis, pantau progres belajar." />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Otak Kancil — Gabut Jadi Hebat" />
+    <meta name="twitter:description" content="Aplikasi edukasi Android: jelajahi materi, kerjakan kuis, pantau progres belajar." />
+
+    <!-- Data terstruktur. Sengaja tanpa harga, rating, atau jumlah unduhan karena belum terverifikasi. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Otak Kancil",
+        "alternateName": "Gabut Jadi Hebat",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "EducationalApplication",
+        "description": "Aplikasi edukasi Android untuk menjelajahi materi, mengerjakan kuis, dan mengembangkan pengetahuan secara bertahap.",
+        "inLanguage": ["id", "en"]
+      }
+    </script>
+
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          document.documentElement.dataset.theme = t;
+        } catch (e) { document.documentElement.dataset.theme = 'dark'; }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <noscript>
+      <h1>Otak Kancil — Aplikasi Edukasi Android</h1>
+      <p>Otak Kancil adalah aplikasi edukasi Android untuk menjelajahi materi, mengerjakan kuis, dan mengembangkan pengetahuan secara bertahap. Aktifkan JavaScript untuk melihat halaman ini sepenuhnya.</p>
+    </noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

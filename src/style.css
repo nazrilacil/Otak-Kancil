@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Palet disamakan dengan aplikasi: latar navy gelap, kartu navy, aksen biru */
+@theme {
+  --color-night: #121a31;
+  --color-card: #202e4b;
+  --color-line: #2f4066;
+  --color-brand: #5082f1;
+  --color-brand-dark: #3d6ad8;
+  --color-brand-soft: #7ea5f4;
+  --color-mint: #4fd1a5;
+  --color-violet: #a99cf8;
+  --color-ink: #e8eefc;
+  --color-muted: #a9b6d3;
+  --color-warn: #fcd34d;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; color-scheme: dark; }
+
+/* Mode terang: hanya menimpa variabel warna di atas; semua komponen otomatis mengikuti. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-night: #f4f7ff;
+  --color-card: #ffffff;
+  --color-line: #d3ddf2;
+  --color-brand: #3d6ad8;
+  --color-brand-dark: #2f56b8;
+  --color-brand-soft: #3d6ad8;
+  --color-mint: #0b7a5a;
+  --color-violet: #5646c9;
+  --color-warn: #9a5b00;
+  --color-ink: #14213d;
+  --color-muted: #4a5b7d;
+}
+body { background: var(--color-night); color: var(--color-ink); font-family: var(--font-sans); }
+
+:focus-visible { outline: 3px solid var(--color-brand-soft); outline-offset: 2px; border-radius: 6px; }
+
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .faq-chevron { transform: rotate(180deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
