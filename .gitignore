@@ -1,13 +1,5 @@
-# Dependensi dan hasil build (dibuat ulang otomatis oleh npm / Vercel)
-node_modules
-dist
-
-# Variabel lingkungan lokal
-*.local
-
-# Log dan file sistem
-npm-debug.log*
-.DS_Store
-Thumbs.db
-.vscode/*
-!.vscode/extensions.json
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
